@@ -68,5 +68,13 @@ def dump(history):
         pickle.dump(history, file)
     lastWrite = history[-1]
 
+def load():
+    from CONSTANT import OUTPUT_PICKLE_FILENAME
+    import pickle
+    with open(OUTPUT_PICKLE_FILENAME, "rb") as file:
+        return pickle.load(file)
+
+data = load()
+#%%
 
 
